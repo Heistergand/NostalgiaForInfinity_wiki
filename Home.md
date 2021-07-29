@@ -8,18 +8,18 @@ The Wiki is just being written and might be changing regularly , if you got any 
 
 ## INDEX
 
-[Preliminary Setup]()
+[**Preliminary Setup**]()
 
 * [Freqtrade Setup and Syncing with Private Repo]()
 * [VPS Bot Hosting]()
 * [NFI Deployment]()
 * [General Configs]()
 
-[NFI Specific Configs]()
+[**NFI Specific Configs**]()
 
-[Extra Tips]()
+[**Extra Tips**]()
 
-[Other Resources]()
+[**Other Resources**]()
 
 ## FAQ
 **1> How to fix pandas_ta Error for Docker**
