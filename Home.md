@@ -11,11 +11,13 @@ The Wiki is just being written and might be changing regularly , if you got any 
 [**Preliminary Setup**]()
 
 * [Freqtrade Setup and Syncing with Private Repo]()
-* [VPS Bot Hosting]()
 * [NFI Deployment]()
+* [VPS Bot Hosting]()
 * [General Configs]()
 
 [**NFI Specific Configs**]()
+
+[**How It Works**]()
 
 [**Extra Tips**]()
 
