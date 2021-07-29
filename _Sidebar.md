@@ -1,3 +1,5 @@
+[**Help**]()
+
 [**Preliminary Setup**]()
 
 * [Freqtrade Setup and Syncing with Private Repo]()
