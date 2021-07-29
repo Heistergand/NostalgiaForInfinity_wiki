@@ -26,5 +26,5 @@ The Wiki is just being written and might be changing regularly , if you got any 
 ## FAQ
 **1> How to fix pandas_ta Error for Docker**
 
-Refer to NFI Deployment Section , it requires you to build a custom docker image including the external libraries (pandas_ta) required
+Refer to [NFI Deployment]() Section , it requires you to build a custom docker image including the external libraries (pandas_ta) required
 
