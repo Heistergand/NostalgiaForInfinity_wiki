@@ -1,4 +1,4 @@
-[**Help**]()
+[**Home**]()
 
 [**Preliminary Setup**]()
 
