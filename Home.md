@@ -15,13 +15,13 @@ The Wiki is just being written and might be changing regularly , if you got any 
 * [VPS Bot Hosting](https://github.com/iterativv/NostalgiaForInfinity/wiki/Preliminary-Setup#vps-bot-hosting)
 * [General Configs](https://github.com/iterativv/NostalgiaForInfinity/wiki/Preliminary-Setup#general-configs)
 
-[**NFI Specific Configs**]()
+[**NFI Specific Configs**](https://github.com/iterativv/NostalgiaForInfinity/wiki/NFI-Specific-Configs)
 
-[**How It Works**]()
+[**How It Works**](https://github.com/iterativv/NostalgiaForInfinity/wiki/How-It-Works)
 
-[**Extra Tips**]()
+[**Extra Tips**](https://github.com/iterativv/NostalgiaForInfinity/wiki/Extra-Tips)
 
-[**Other Resources**]()
+[**Other Resources**](https://github.com/iterativv/NostalgiaForInfinity/wiki/Other-Resources)
 
 ## FAQ
 **1> How to fix pandas_ta Error for Docker**
