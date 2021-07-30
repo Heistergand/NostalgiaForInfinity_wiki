@@ -1,4 +1,8 @@
-## Freqtrade on Local System
+# Freqtrade Setup and Syncing with Private Repo
 
-## Setting up VPS and Syncing via Git
+# NFI Deployment
+
+# VPS Bot Hosting
+
+# General Configs
 
