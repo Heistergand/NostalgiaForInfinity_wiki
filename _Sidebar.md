@@ -1,6 +1,6 @@
 [**Home**](https://github.com/iterativv/NostalgiaForInfinity/wiki)
 
-[**Preliminary Setup**]()
+[**Preliminary Setup**](https://github.com/iterativv/NostalgiaForInfinity/wiki/Preliminary-Setup)
 
 * [Freqtrade Setup and Syncing with Private Repo]()
 * [NFI Deployment]()
