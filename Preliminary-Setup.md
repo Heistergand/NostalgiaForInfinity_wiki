@@ -26,21 +26,21 @@ Your compose file should look something like this
 ---
 version: '3'
 services:
-  vio-live:
+  freqtrade:
     build:
       context: .
       dockerfile: "./docker/Dockerfile.custom"
     restart: unless-stopped
-    container_name: vio-live
+    container_name: freqtrade
     volumes:
       - "./user_data:/freqtrade/user_data"
     ports:
-      - "0.0.0.0:8083:8083"
+      - "0.0.0.0:8080:8080"
     command: >
       trade
-      --logfile /freqtrade/user_data/logs/vio_live.log
-      --db-url sqlite:////freqtrade/user_data/vio_live.sqlite
-      --config /freqtrade/user_data/vio_live.json --config /freqtrade/user_data/vio_live-PRIVATE.json
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
+      --config /freqtrade/user_data/config.json
 ```
 
 Now we need to create the build instructions in dockerfile.custom , for this first make a directory `docker` and then inside it make a new file `Dockerfile.custom` . Inside it paste the following snippet
