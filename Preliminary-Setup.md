@@ -9,6 +9,55 @@ This is
 
 # NFI Deployment
 
+NFInext since v7.2 requires the installation of external dependencies (pandas_ta)
+
+To Install this on docker , we need to make a few changes in the docker-compose.yml and make a new dockerfile.custom to build a new Image containing the now required dependencies
+
+So first , add the build line to your docker-compose file
+```
+ build:
+      context: .
+      dockerfile: "./docker/Dockerfile.custom"
+```
+and remove the freqtrade image line
+
+Your compose file should look something like this
+```
+---
+version: '3'
+services:
+  vio-live:
+    build:
+      context: .
+      dockerfile: "./docker/Dockerfile.custom"
+    restart: unless-stopped
+    container_name: vio-live
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    ports:
+      - "0.0.0.0:8083:8083"
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/vio_live.log
+      --db-url sqlite:////freqtrade/user_data/vio_live.sqlite
+      --config /freqtrade/user_data/vio_live.json --config /freqtrade/user_data/vio_live-PRIVATE.json
+```
+
+Now we need to create the build instructions in dockerfile.custom , for this first make a directory `docker` and then inside it make a new file `Dockerfile.custom` . Inside it paste the following snippet
+```
+FROM freqtradeorg/freqtrade:stable
+
+# Switch user to root if you must install something from apt
+# Don't forget to switch the user back below!
+USER root
+
+# Dependencies
+RUN pip install pandas-ta
+
+#switching back to normal user
+USER ftuser
+```
+
 # VPS Bot Hosting
 
 # General Configs
