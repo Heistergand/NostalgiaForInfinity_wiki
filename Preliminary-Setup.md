@@ -58,6 +58,9 @@ RUN pip install pandas-ta
 USER ftuser
 ```
 
+After u make the Dockerfile.custom file , run `docker-compose build --no-cache` to build the new image with the required dependencies
+Now to run the bot , its the usual `docker-compose up -d` 
+
 # VPS Bot Hosting
 
 # General Configs
