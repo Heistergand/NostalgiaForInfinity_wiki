@@ -40,11 +40,17 @@ sudo systemctl enable containerd.service
 Now to Install docker-compose follow step 1 in : https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-debian-10
 
 ### Docker For Mac
-I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand
+I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand . 
 Would be great if someone else could fill this up :D
 
 
 _**Now with that done you should be all set to install to Freqtrade next**_
+
+## Freqtrade Installation For Docker
+The Freqtrade Documentation has this part covered quite well https://www.freqtrade.io/en/stable/docker_quickstart/
+I would suggest you follow this . Also dont bother about what you choose for the configs , we will be replacing it with something fine tuned for NFI
+
+Configuring 
 
 # NFI Deployment
 
