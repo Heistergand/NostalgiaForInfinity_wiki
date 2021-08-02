@@ -41,11 +41,10 @@ Now to Install docker-compose follow step 1 in : https://www.digitalocean.com/co
 
 ### Docker For Mac
 I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand
-
 Would be great if someone else could fill this up :D
 
 
-Now with that done you should be all set to install to Freqtrade next
+_**Now with that done you should be all set to install to Freqtrade next**_
 
 # NFI Deployment
 
