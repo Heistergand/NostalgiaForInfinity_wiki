@@ -32,8 +32,10 @@ Its pretty straight forward for Linux , since there is no virtualization involve
 Follow this guide to get docker installed : https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10 , till step 4 , where you run hello world , the rest is quite unnecessary 
 
 Then configure docker to start on boot :
-```sudo systemctl enable docker.service
-sudo systemctl enable containerd.service```
+```
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
 
 Now to Install docker-compose follow step 1 in : https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-debian-10
 
