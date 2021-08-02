@@ -40,7 +40,8 @@ sudo systemctl enable containerd.service
 Now to Install docker-compose follow step 1 in : https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-debian-10
 
 ### Docker For Mac
-I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand 
+I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand
+
 Would be great if someone else could fill this up :D
 
 
@@ -84,7 +85,7 @@ services:
 
 Now we need to create the build instructions in dockerfile.custom , for this first make a directory `docker` and then inside it make a new file `Dockerfile.custom` . Inside it paste the following snippet
 ```
-FROM freqtradeorg/freqtrade:stable
+FROM freqtradeorg/freqtrade:develop
 
 # Switch user to root if you must install something from apt
 # Don't forget to switch the user back below!
