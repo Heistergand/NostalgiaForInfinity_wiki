@@ -48,9 +48,11 @@ _**Now with that done you should be all set to install to Freqtrade next**_
 
 ## Freqtrade Installation For Docker
 The Freqtrade Documentation has this part covered quite well https://www.freqtrade.io/en/stable/docker_quickstart/
-I would suggest you follow this . Also dont bother about what you choose for the configs , we will be replacing it with something fine tuned for NFI
+I would suggest you follow this . Also dont bother much about what you choose for the configs , we will be replacing it with something fine tuned for NFI and give u suggestions on how to optimise it 
 
-Configuring 
+(if you want to get used to Freqtrade a bit before you get into using NFI , check this [playlist](https://www.youtube.com/playlist?list=PL0rsv4zz8BfYu-8CrOjYAEdwQY2hFBXmQ) )
+
+
 
 # NFI Deployment
 
