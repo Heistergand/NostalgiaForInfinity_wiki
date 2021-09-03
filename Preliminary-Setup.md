@@ -92,7 +92,7 @@ services:
 
 Now we need to create the build instructions in dockerfile.custom , for this first make a directory `docker` and then inside it make a new file `Dockerfile.custom` . Inside it paste the following snippet
 ```
-FROM freqtradeorg/freqtrade:develop
+FROM freqtradeorg/freqtrade:stable
 
 # Switch user to root if you must install something from apt
 # Don't forget to switch the user back below!
