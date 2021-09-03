@@ -110,5 +110,74 @@ Now to run the bot , its the usual `docker-compose up -d`
 
 # VPS Bot Hosting
 
+Choosing a VPS is completely optional but highly recommended , since it gives u the least latency to the exchanegs servers and uninterrupted running of the bot compared to it running on your local machine such as a pi or your PC . So yeah if u dont mind it , highly encouraged to get one .
+
+So regarding the choice of VPS , most NFI users here prefers Vultr due to its great performance and reasonable pricing , but for those who want the cheapest option there is maybe try to go for contabo
+
+[Here is a referral link for Vultr](https://www.vultr.com/?ref=8904923-6G) , This gives you 100 USD of credits to use for 30 days in vultr
+
+For Binance and Kucoin , Vultr tokyo high frequency plans seem to be the most optimal , so I suggest you for the same
+(btw use these referrals to sign up for exchanges if possible to support iterativ : [Binance](https://accounts.binance.com/en/register?ref=37365811) , [Kucoin](https://www.kucoin.com/ucenter/signup?rcode=rJTLZ9K) , [Huobi]{https://www.huobi.com/en-us/topic/double-reward/?invite_code=ubpt2223}
+
+
+Now Assuming u chose Vultr , here are the instructions to set things up fast
+[this is a note i have written a while ago regarding VPS service providers and how to set the bot](https://www.notion.so/violetto/Setting-up-VPS-and-Syncing-via-Git-ee9174f9a383416990f16320eeb0d31a)
+First choose a plan from the high frequency line of VPS , then choose Tokyo location and Debian 10 x64 , the rest fill as you want to and make your new VPS instance . 
+
+Grab a ssh client (most os have a ssh client pre installed in them , go check terminal) , and then login to the vps as root 
+
+Next since this is a fresh Linux system , you need a sudo user account created . For that follow [this](https://www.vultr.com/docs/create-a-sudo-user-on-debian-best-practices)
+
+The Rest on how to set up docker and docker-compose is above in the [linux installation[(https://www.vultr.com/docs/create-a-sudo-user-on-debian-best-practices) part
+
+Next regarding how to add strategy file to the vps instance , there are multiple ways to do this 
+
+Option 1 : Add File Manually to VPS folder
+For this we will use GUI enabled SFTP client , I suggest something like WinSCP for windows users , for other OSs I am not that familiar
+Now via WinSCP you can manually add files to the desired location in your vps and drag and drops stuff in there from your local machine .
+
+Option 2 : Including the file download instruction in the docker build file
+For this make you dockercustom file something like this
+```
+FROM freqtradeorg/freqtrade:develop
+
+# grabing strategy from web
+ADD https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityNext.py /freqtrade/user_data/strategies/docker-grab/
+VOLUME /freqtrade/user_data/strategies/docker-grab/
+
+# Switch user to root if you must install something from apt
+# Don't forget to switch the user back below!
+USER root
+
+# Dependencies
+RUN pip install pandas-ta
+
+#switching back to normal user
+USER ftuser
+```
+Also make a empty folder docker-grab in strategies folder for docker
+
+Now with this when you rebuild your docker image with `docker-compose build --no-cache` the latest available strategy from git will be downloaded along with dependencies and be binded to the image . Be sure add the docker-grab folder to the strategies directory in the docker file for this to work
+
+Option 3  : Clone NFI git repo and symlink it to strategies folder
+(i havent tried this but everyone other than me is using this on the NFI server , If someone reads this and knows how to do this please fill the thing here briefly or DM me ~Violtetto)
+
+This is what is generally recommended by the community , and many auto strategy updaters have been written around this (these can be found in extra stuff / tips)
+
 # General Configs
+
+For optimal performance, suggested to use between 4 and 6 open trades, with unlimited stake.
+
+A pairlist with 40 to 80 pairs. Volume pairlist works well.
+
+Prefer stable coin (USDT, BUSD etc) pairs, instead of BTC or ETH pairs.
+
+Highly recommended to blacklist leveraged tokens (*BULL, *BEAR, *UP, *DOWN etc).
+
+Ensure that you don't override any variables in you config.json. Especially the timeframe (must be 5m).
+
+* `use_sell_signal` must set to true (or not set at all).
+* `sell_profit_only` must set to false (or not set at all).
+* `ignore_roi_if_buy_signal` must set to true (or not set at all).
+
 
