@@ -139,7 +139,7 @@ Now via WinSCP you can manually add files to the desired location in your vps an
 Option 2 : Including the file download instruction in the docker build file
 For this make you dockercustom file something like this
 ```
-FROM freqtradeorg/freqtrade:develop
+FROM freqtradeorg/freqtrade:stable
 
 # grabing strategy from web
 ADD https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityNext.py /freqtrade/user_data/strategies/docker-grab/
