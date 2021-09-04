@@ -4,6 +4,8 @@ This section will cover things required to actually run Freqtrade / NFI , such a
 
 Depending upon your OS , Freqtrade installation can differ to quite an extent . There are primarily 2 ways to do it either installing natively to your OS or using Docker . If you are really constrained with the resources you have go the native route , but it is highly recommended to use the Docker Installation since majority of the users use it and most development will be catering to that user base , plus its easier to get everything else configured once you have Docker Setup . You can check the [Freqtrade docs](https://www.freqtrade.io/en/stable/installation/) for the other methods , we will be covering the docker method of things for the sake of keeping things simple. 
 
+### Native Installation
+If you go with a lower end machine and you dont have enough swap allocated , you might want to check out the Native Installation , since now docker seems to be struggling with a 1GB ram system . You can find more instructions [over here]()
 ## Docker Installation
 This is also be going to vary a bit depending on your OS , but once you have docker installed things should be easy.
 
@@ -127,6 +129,8 @@ First choose a plan from the high frequency line of VPS , then choose Tokyo loca
 Grab a ssh client (most os have a ssh client pre installed in them , go check terminal) , and then login to the vps as root 
 
 Next since this is a fresh Linux system , you need a sudo user account created . For that follow [this](https://www.vultr.com/docs/create-a-sudo-user-on-debian-best-practices)
+
+Maybe also allocate swap to the system https://www.vultr.com/docs/setup-swap-file-on-linux
 
 The Rest on how to set up docker and docker-compose is above in the [linux installation[(https://www.vultr.com/docs/create-a-sudo-user-on-debian-best-practices) part
 
