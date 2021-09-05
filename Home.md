@@ -1,7 +1,7 @@
 # Nostagia For Infinity ~ iterativ#0983
 ### Welcome to the NFI Wiki 
 
-Nostagia For Infinity is a strategy for [Freqtrade](https://www.freqtrade.io/en/stable/) (an open source trading bot) developed mainly by Iterativ and supported by the Community at [Discord](https://discord.gg/75afDh4tpu).
+Nostagia For Infinity is a strategy for [Freqtrade](https://www.freqtrade.io/en/stable/) (an open source trading bot) developed mainly by Iterativ and supported by the Community at [Discord](https://discord.gg/DeAmv3btxQ).
 
 The Wiki is just being written and might be changing regularly , if you got any suggestions or doubts be sure to swing by the discord server or check the FAQ section below. Have a nice read :D 
 
