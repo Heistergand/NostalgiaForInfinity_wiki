@@ -11,3 +11,5 @@ NFI autoupdater scripts collection so far:
 # Grafana
 
 # BackTest Combiner
+
+# Binance WebHook Proxy for Freqtrade
