@@ -30,6 +30,12 @@ docker run --name grafana -d -p 3000:3000 -v /home/usar/sqliteDBs/:/etc/grafana/
 ```
 here replace usar with whatever the username of the account is and  if u want to change the ports change 3000:3000 to whatever value u want (change the first thing only tbh)
 
+Now if you dont have port 3000 opened on your firewall you should prolly do that , if not ssh tunnel into the grafana running machine at least
+then just go to IP:3000 in your browser and tada you should see the grafana login page
+
+
+
+
 
 # BackTest Combiner
 
