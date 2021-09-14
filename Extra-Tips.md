@@ -16,9 +16,13 @@ You can have this grafana thing set up either on your bot running machine or any
 
 First in the machine u want grafana , ofc you need docker it its not installed (refer to prerequisites/preliminary) .
 For Debian folks here is my personal quick setup command
-```sudo apt install glances -y && sudo apt install git -y && sudo apt update && sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y && curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && sudo apt update && apt-cache policy docker-ce && sudo apt install docker-ce -y && sudo systemctl status docker && sudo usermod -aG docker ${USER} && su - ${USER}```
+```
+sudo apt install glances -y && sudo apt install git -y && sudo apt update && sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y && curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && sudo apt update && apt-cache policy docker-ce && sudo apt install docker-ce -y && sudo systemctl status docker && sudo usermod -aG docker ${USER} && su - ${USER}
+```
 
-```sudo curl -L https://github.com/docker/compose/releases/download/1.25.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && docker-compose --version```
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && docker-compose --version
+```
 
 Once you have it run this thing (thanks Hippocritical)
 ```
