@@ -33,9 +33,12 @@ here replace usar with whatever the username of the account is and  if u want to
 Now if you dont have port 3000 opened on your firewall you should prolly do that , if not ssh tunnel into the grafana running machine at least
 then just go to IP:3000 in your browser and tada you should see the grafana login page . Login with credentials admin (both username and password) then u will be prompted to make a new password , and you will finally get into the main grafana page
 
-Now we will need to set up the dashboard ofc , so first go to the + button to the left pane, go to import , import json 
-now for the json file (the actual dashboard ) you will need to find one or make your own one . Leonardvdj has one , dont know if he likes to share it , but thats what i use . get the json file and upload it .
+First to setup a datasource
 Now before you can save the actual thing , you will need to copy over a db from anyone of your instance to the sqliteDBs folder , just to get like a dummy db in there to get stuff started (winSCP might be a handy tool for this) , (you might need sudo perms to move the files in the folder)
+Now go to the settingg/clog icon in the left pane and add datasource , look for sqlite and then add ur new db that u moved over , (if it doesnt appear docker stop grafana docker rm grafana docker start grafana).Now in data sources adding page , type in the dir inside the container where the db will be `/etc/grafana/provisioning/datasources/live.sqlite` . with this the data source should be added
+
+Now we will need to set up the dashboard ofc , so first go to the + button to the left pane, go to import , import json 
+now for the json file (the actual dashboard ) you will need to find one or make your own one . Leonardvdj has one , dont know if he likes to share it , but thats what i use . get the json file and upload it .in CCE choose the data source u just entered
 
 now run this thing 
 
