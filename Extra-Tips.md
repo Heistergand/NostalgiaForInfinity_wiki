@@ -42,6 +42,8 @@ now for the json file (the actual dashboard ) you will need to find one or make 
 
 now you should be seeing the dashboard with the data beautifully displayed 
 
+Now to make it sync real time , u can setup a cron job to run a scp command (with sshpass if needed) , to copy files and update the files in the DB folder regularly
+
 
 # BackTest Combiner
 
