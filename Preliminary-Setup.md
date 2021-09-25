@@ -39,7 +39,10 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 
-Now to Install docker-compose follow step 1 in : https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-debian-10
+Now to Install docker-compose
+run this `sudo apt update && sudo apt upgrade -y && sudo apt install docker docker-compose -y`
+and then `sudo usermod -a -G docker $USER` do a reboot or switch user later and u should be done (`sudo reboot`)
+
 
 ### Docker For Mac
 I got no idea on how things are on the Mac , my friends say its easier than windows But yeah I never tested it first hand . 
