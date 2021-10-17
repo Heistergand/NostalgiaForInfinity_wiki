@@ -59,60 +59,6 @@ I would suggest you follow this . Also dont bother much about what you choose fo
 
 
 
-# NFI Deployment
-
-NFInext since v7.2 requires the installation of external dependencies (pandas_ta)
-
-To Install this on docker , we need to make a few changes in the docker-compose.yml and make a new dockerfile.custom to build a new Image containing the now required dependencies
-
-So first , add the build line to your docker-compose file
-```
- build:
-      context: .
-      dockerfile: "./docker/Dockerfile.custom"
-```
-and remove the freqtrade image line
-
-Your compose file should look something like this
-```
----
-version: '3'
-services:
-  freqtrade:
-    build:
-      context: .
-      dockerfile: "./docker/Dockerfile.custom"
-    restart: unless-stopped
-    container_name: freqtrade
-    volumes:
-      - "./user_data:/freqtrade/user_data"
-    ports:
-      - "0.0.0.0:8080:8080"
-    command: >
-      trade
-      --logfile /freqtrade/user_data/logs/freqtrade.log
-      --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
-      --config /freqtrade/user_data/config.json
-```
-
-Now we need to create the build instructions in dockerfile.custom , for this first make a directory `docker` and then inside it make a new file `Dockerfile.custom` . Inside it paste the following snippet
-```
-FROM freqtradeorg/freqtrade:stable
-
-# Switch user to root if you must install something from apt
-# Don't forget to switch the user back below!
-USER root
-
-# Dependencies
-RUN pip install pandas-ta
-
-#switching back to normal user
-USER ftuser
-```
-
-After u make the Dockerfile.custom file , run `docker-compose build --no-cache` to build the new image with the required dependencies
-Now to run the bot , its the usual `docker-compose up -d` 
-
 # VPS Bot Hosting
 
 Choosing a VPS is completely optional but highly recommended , since it gives u the least latency to the exchanegs servers and uninterrupted running of the bot compared to it running on your local machine such as a pi or your PC . So yeah if u dont mind it , highly encouraged to get one .
