@@ -1,6 +1,7 @@
 # Hold Trades
 
- -------- SPECIFIC TRADES ---------------------------------------------------------------------------- 
+ -------- SPECIFIC TRADES 
+   
    In case you want to have SOME of the trades to only be sold when on profit, add a file named        
    "nfi-hold-trades.json" in the user_data directory                                                   
                                                                                                        
@@ -19,13 +20,14 @@
       HOLD support logic to run                                                                        
     * This feature can be completely disabled with the holdSupportEnabled class attribute              
                                                                                                        
- -------- SPECIFIC PAIRS ----------------------------------------------------------------------------- 
+ -------- SPECIFIC PAIRS 
+   
    In case you want to have some pairs to always be on held until a specific profit, using the same    
    "hold-trades.json" file add something like:                                                         
                                                                                                        
    {"trade_pairs": {"BTC/USDT": 0.001, "ETH/USDT": -0.005}}                                            
                                                                                                        
- -------- SPECIFIC TRADES AND PAIRS ------------------------------------------------------------------ 
+ -------- SPECIFIC TRADES AND PAIRS 
    It is also valid to include specific trades and pairs on the holds file, for example:               
                                                                                                        
    {"trade_ids": {"1": 0.001}, "trade_pairs": {"BTC/USDT": 0.001}}
@@ -39,6 +41,6 @@ This is not per se NFI specific , but just some good practice and a nifty thing 
 
 # Some Fine Tunable Stuff
 
- -------- Pairlists and Blacklists --------------------------------------------------------------------
+ -------- Pairlists and Blacklists
 So for Kucoin and Binance (BUSD and USDT) , there are recommended volume pairlist configurations and blacklists available that u can either incorporate to ur config files or use some git/symlink magic and directly use the ones from the repo and update them easily . [Here are the configs](https://github.com/iterativv/NostalgiaForInfinity/tree/main/configs)
 
