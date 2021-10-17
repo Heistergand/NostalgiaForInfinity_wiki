@@ -22,11 +22,6 @@ The Wiki is just being written and might be changing regularly , if you got any 
 
 [**Other Resources**](https://github.com/iterativv/NostalgiaForInfinity/wiki/Other-Resources)
 
-## FAQ
-**1> How to fix pandas_ta Error for Docker**
-
-Refer to [NFI Deployment](https://github.com/iterativv/NostalgiaForInfinity/wiki/Preliminary-Setup#nfi-deployment) Section , it requires you to build a custom docker image including the external libraries (pandas_ta) required
-
 ## Donations
 
 Absolutely not required. However, will be accepted as a token of appreciation.
