@@ -42,5 +42,6 @@ This is not per se NFI specific , but just some good practice and a nifty thing 
 # Some Fine Tunable Stuff
 
  -------- Pairlists and Blacklists
+
 So for Kucoin and Binance (BUSD and USDT) , there are recommended volume pairlist configurations and blacklists available that u can either incorporate to ur config files or use some git/symlink magic and directly use the ones from the repo and update them easily . [Here are the configs](https://github.com/iterativv/NostalgiaForInfinity/tree/main/configs)
 
