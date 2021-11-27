@@ -30,6 +30,7 @@ Absolutely not required. However, will be accepted as a token of appreciation.
 * ETH (ERC20): `0x83D3cFb8001BDC5d2211cBeBB8cB3461E5f7Ec91`
 * BEP20/BSC (USDT, ETH, BNB, ...): `0x86A0B21a20b39d16424B7c8003E4A7e12d78ABEe`
 * TRC20/TRON (USDT, TRON, ...): `TTAa9MX6zMLXNgWMhg7tkNormVHWCoq8Xk`
+* Patreon : https://www.patreon.com/iterativ
 
 ## Referral Links
 
