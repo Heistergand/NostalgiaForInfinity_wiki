@@ -18,7 +18,10 @@
       output of the telegram status command.                                                           
     * Regardless of the defined profit ratio(s), the strategy MUST still produce a SELL signal for the 
       HOLD support logic to run                                                                        
-    * This feature can be completely disabled with the holdSupportEnabled class attribute              
+    * This feature can be completely disabled with the holdSupportEnabled class attribute   
+    * In case HOLD feature is activated, then "position_adjustment" will not be active. For enable 
+      "position_adjustment" for your specific HOLD trade then this trade shall be excluded from 
+      "nfi-hold-trades.json" file.    
                                                                                                        
  -------- SPECIFIC PAIRS 
    
@@ -44,4 +47,3 @@ This is not per se NFI specific , but just some good practice and a nifty thing 
  -------- Pairlists and Blacklists
 
 So for Kucoin and Binance (BUSD and USDT) , there are recommended volume pairlist configurations and blacklists available that u can either incorporate to ur config files or use some git/symlink magic and directly use the ones from the repo and update them easily . [Here are the configs](https://github.com/iterativv/NostalgiaForInfinity/tree/main/configs)
-
